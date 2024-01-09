@@ -1,3 +1,3 @@
 # Website
 
-Personal website using react.js
+Cover website made back in ~12/2019
