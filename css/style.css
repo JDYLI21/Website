@@ -1,0 +1,193 @@
+/* Importing the "Open Sans Condensed" font family from google font */
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+/* For easier control over the size and positioning of the div containers */
+    * { 
+        box-sizing: border-box;
+}
+
+/* Centering the image and making it fade in */
+#center_text img {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 125%;
+    height: 125%;
+    z-index: -1;
+    -webkit-animation: fadein 2s;
+}
+
+/* CSS Animation using webkit */
+@-webkit-keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* Body which contians all the text the stakeholders are going to read */
+.body_content {
+    margin-top: 75%;
+    width: 75%;
+    left: 12.5%;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    overflow: auto;
+}
+
+/* Positioning the footer and making it look like the body content container */
+.footer {
+    width: 75%;
+    background-color: rgba(255, 255, 255, 0.85);
+    position: relative;
+    left: 12.5%;
+    float: left;
+}
+
+/* Making the font size of the text smaller so it is easier on the eyes */
+.footer p {
+    font-size: 20px;
+}
+
+/* Navigation Bar */
+.navbar {
+    border: 5px;
+    width: 100%;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 42.5%;
+}
+
+/* Text in nav bar, li is used exclusively for navbar */
+li {
+    list-style-type: none;
+    float: left;
+    margin: 0 2.5%;
+}
+
+/* Linking the text and changing the style of it */
+li a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    color: black;
+    text-decoration-line: none;
+    font-weight: 800;
+    font-size: 125%;
+    border-radius: 10px;
+}
+
+/* Hovering over the links on the navbar */
+li a:hover:not(.active) {
+    background-color: rgba(255,255,255,0.5)  
+}
+
+/* Adding the strikethrough for the page they are on on the nav bar */
+.active {
+    text-decoration-line: line-through;
+}
+
+/* Sidenav bar popout + style */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #e7e7e7;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s; 
+}
+
+/* Making the header stick more towards the left */
+.sidenav h1 {
+    padding-left: 5%;
+}
+
+/* Changing the font of the paragraphs in the body content */
+.sidenav p {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* Changing the style of text in the sidenav */
+.sidenav a,p {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    text-align: left;
+}
+
+/* Effects on hover over the links in the side nav */
+.sidenav a:hover {
+    text-decoration-line: line-through;
+}
+
+/* Close button for side nav */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Hamburger menu for side nav */
+.sidenavbtn {
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+/* Making the buttons background's invisible so you can only see the button image/text */
+button {
+    border :none;
+    background-color: inherit;
+}
+
+/* Anmated down arrow on main page */
+.downarrow {
+    position: absolute;
+    top: 92.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+/* Find out more text on main page */
+.findoutmoretxt {
+    position: fixed;
+    top: 92.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.commentbox input,textarea {
+    margin: 5px 0px 5px 0px;
+    width: 20%;
+}
+
+textarea {
+    width: 50%;
+    height: 100%;
+}
+
+/* Background image */
+body {
+    background-image: url(../images/Background-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Changing the css for viewing on phone screens */
+@media screen and (max-width: 960px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
